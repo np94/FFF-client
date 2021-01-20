@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apiHandler from '../../api/apiHandler';
 import UserContext from "../Auth/UserContext";
 import { buildFormData } from "../../utils";
+import AutoComplete from "../AutoComplete";
 
 
 class FormEditAnnounce extends Component {
@@ -108,16 +109,12 @@ class FormEditAnnounce extends Component {
               type="text"
             />
           </div>
-            <div>
-            <label htmlFor="location">Location</label>
-            <input
-              onChange={this.handleChange}
-              value={this.state.location.coordinates}
-              id="location"
-              name="location"
-              type="text"
-            />
-            </div>
+          <div className="form-group">
+            <label className="label" htmlFor="location">
+              Address
+            </label>
+            <AutoComplete onSelect={this.handlePlace} />
+          </div>
             <div>
             <label htmlFor="email">E-mail</label>
             <input
