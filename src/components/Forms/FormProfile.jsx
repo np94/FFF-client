@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { buildFormData } from "../../utils";
 import apiHandler from "../../api/apiHandler";
 import UserContext from "../Auth/UserContext";
-
+import "../../styles/edit-pro.css"
 
 class FormProfile extends Component {
   static contextType = UserContext;
@@ -92,30 +92,35 @@ class FormProfile extends Component {
   render() {
     return (
         <div className="missing">
-        <form className="form" onSubmit={this.handleSubmit}>
-          <h1 className="header">Edit profile</h1>
-          <img style={{width: 100, height: 100}} src={this.state.user.profileImg} alt="animal"/>
+          <div className="main-edit-pro">
+            <p className="form-pro">Edit your profile</p>
+          
+        <form className="pro-form" onSubmit={this.handleSubmit}>
+          <img className="image-pro" src={this.state.user.profileImg} alt="animal"/>
           <label className="label" htmlFor="image">
             </label>
             <input
+            className="un-pro"
               ref={this.imageRef}
               onChange={this.handleChange}
               id="profilImg"
               name="profilImg"
               type="file"
+              
+
             />
             
           <div className="form-group">
             <label className="label" htmlFor="username">
-              Username
             </label>
             <input
-              className="input"
+              className="un-pro"
               id="username"
               type="text"
               name="username"
               onChange={this.handleChange}
               value={this.state.user.username}
+              placeholder="Username"
             />
             {!this.isValidInput("username") && (
               <p className="input-error">Invalid input</p>
@@ -124,15 +129,15 @@ class FormProfile extends Component {
 
           <div className="form-group">
             <label className="label" htmlFor="password">
-              Password
             </label>
             <input
-              className="input"
+              className="un-pro"
               id="password"
               type="text"
               name="password"
               onChange={this.handleChange}
               value={this.state.user.password || ""}
+              placeholder="Password"
               
             />
             {!this.isValidInput("password") && (
@@ -141,23 +146,24 @@ class FormProfile extends Component {
           </div>
           <div className="form-group">
             <label className="label" htmlFor="phoneNumber">
-              Phone number
+              
             </label>
             <input
-              className="input"
+              className="un-pro"
               id="phoneNumber"
               type="text"
               name="phoneNumber"
               onChange={this.handleChange}
               value={this.state.user.phoneNumber}
+              placeholder="Phone number"
             />
             {!this.isValidInput("phoneNumber") && (
               <p className="input-error">Invalid input</p>
             )}
           </div>
-          <button>Save</button>
+          <button className="submit-pro">Save</button>
         </form>
-      
+      </div>
       </div>
     );
   }
