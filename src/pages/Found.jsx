@@ -24,11 +24,14 @@ class Found extends Component {
     render() {
         return (
             <div className="missing">
-            <h2>Found page</h2>
+              <div className="all">
+
+              
+            <h2 className="found_title">Found page</h2>
              {this.state.announces.map((announce)=>{
                  if (announce.status[0] === "Found"){
                     return (
-                        <div key={announce._id}>
+                        <div className="found_info" key={announce._id}>
                             <img
                           style={{
                             width: "100vw",
@@ -38,18 +41,19 @@ class Found extends Component {
                           alt={announce.name}
                             />
                         <Link to={`/found/${announce._id}`}>
-                          <h2>{announce.title}</h2>
+                          <h3>{announce.title}</h3>
                         </Link>
-                        <h3>{announce.name}</h3>
-                        <h3>{announce.location.coordinates}</h3>
-                        <h3>{announce.pet_type}</h3>
-                        <h3>{announce.description}</h3>
+                        <h4>{announce.name}</h4>
+                        <h4>{announce.location.coordinates}</h4>
+                        <h4>{announce.pet_type}</h4>
+                        <h4>{announce.description}</h4>
         
                       </div>
                     )}
                
             
             })}
+            </div>
         </div>
         )
     }

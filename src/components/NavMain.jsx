@@ -20,7 +20,7 @@ const NavMain = (props) => {
   }
 
   return (
-    <nav className="NavMain" style={{ width: '100vw', height: '60px' }}>
+    <nav className="NavMain">
       <NavLink exact to="/">
         <h3 className="logo">Furry Friend Finder <span>🐾</span> </h3>
       </NavLink>
@@ -33,7 +33,7 @@ const NavMain = (props) => {
               </NavLink>
             </li>
             <li>
-              <p onClick={handleLogout}>Logout</p>
+              <i className="fas fa-sign-out-alt" onClick={handleLogout}></i>
             </li>
           </React.Fragment>
         )}

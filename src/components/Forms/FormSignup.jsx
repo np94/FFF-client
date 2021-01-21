@@ -12,7 +12,7 @@ class FormSignup extends Component {
     username: "",
     email: "",
     password: "",
-    phone_number: 0,
+    phone_number: null,
   };
 
   isEmailCorrect() {

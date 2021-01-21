@@ -69,11 +69,11 @@ class AutocompletePlace extends Component {
     return (
       <div className="AutocompletePlace">
         <input
-          className="input"
           type="text"
           value={this.props.defaultValue || this.state.search}
           onChange={this.handleSearchChange}
           placeholder="Type an address"
+          className="un-form" 
         />
         <ul className="AutocompletePlace-results">
           {results.map((place) => (

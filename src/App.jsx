@@ -23,7 +23,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/missing" component={Missing} />
-        <Route exact path="/create" component={NewReport} />
+
         <Route exact path="/missing/:id" component={OneMissing} />
         <Route exact path="/found/:id" component={OneFound} />
         <Route exact path="/found" component={Found} />
@@ -32,6 +32,7 @@ function App() {
         <ProtectedRoute exact path="/profile" 
         component={Profile}
          />
+        <ProtectedRoute exact path="/create" component={NewReport} />
         <ProtectedRoute exact path="/profile/:id/edit" 
         component={FormEditAnnounce}
          />

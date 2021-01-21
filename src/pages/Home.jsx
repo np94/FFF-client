@@ -25,13 +25,15 @@ class Home extends React.Component {
     const { user } = this.context;
 
     return (
-      
-      <React.Fragment>
+   
+<React.Fragment>
       
       <AppMap announces={this.state.announces} handleSelectAnnounce={this.onSelectAnnounce} />
       <button><NavLink to="/profile">Missing</NavLink></button>
     </React.Fragment>
        
+      
+      
     );
   }
 }

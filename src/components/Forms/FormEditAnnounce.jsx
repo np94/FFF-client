@@ -3,6 +3,7 @@ import apiHandler from '../../api/apiHandler';
 import UserContext from "../Auth/UserContext";
 import { buildFormData } from "../../utils";
 import AutoComplete from "../AutoComplete";
+import '../../styles/edit-form.css'
 
 
 class FormEditAnnounce extends Component {
@@ -83,56 +84,71 @@ class FormEditAnnounce extends Component {
             });
       
       };
+
+      handlePlace = (place) => {
+        const location = place.geometry;
+        this.setState({ location, formattedAddress: place.place_name });
+      };
     
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}
+          <div className="missing">
+          <div className="main-edit">
+<p className="edit-form" align="center">Edit your announcement</p>
+            <form className="form-edit"onSubmit={this.handleSubmit}
             ref={this.formRef}>
                 <div>
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title"></label>
             <input
+              className="un-edit"
               onChange={this.handleChange}
               value={this.state.title}
               id="title"
               name="title"
               type="text"
+              placeholder="Title"
             />
                 </div>
           <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name"></label>
             <input
+             className="un-edit"
               onChange={this.handleChange}
               value={this.state.name}
               id="name"
               name="name"
               type="text"
+              placeholder="Name"
             />
           </div>
           <div className="form-group">
             <label className="label" htmlFor="location">
-              Address
             </label>
             <AutoComplete onSelect={this.handlePlace} />
           </div>
             <div>
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email"></label>
             <input
+             className="un-edit"
               onChange={this.handleChange}
               value={this.state.email}
               id="email"
               name="email"
               type="text"
+              placeholder="E-mail"
             />
             <div className="form-group">
             <label className="label" htmlFor="status">
-              Status
+              
             </label>
             <select
               name="status"
               id="status"
               onChange={this.handleChange}
               value={this.state.status}
+              placeholder="Status"
+              className="un-edit"
             >
               <option value="" disabled>
                 Select a status
@@ -143,53 +159,63 @@ class FormEditAnnounce extends Component {
           </div>
             </div>
             <div>
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description"></label>
             <input
+             className="un-edit"
               onChange={this.handleChange}
               value={this.state.description}
               id="description"
               name="description"
               type="text"
+              placeholder="Description"
             />
             </div>
          
             <div>
-            <label htmlFor="image">Image</label>
+            <label htmlFor="image"></label>
             <input
+             className="un-edit"
               ref={this.imageRef}
               onChange={this.handleChange}
               value={this.state.image}
               id="image"
               name="image"
               type="file"
+              placeholder="Image"
             />
             </div>
            
          
             <div>
-            <label htmlFor="pet_type">Pet type</label>
+            <label htmlFor="pet_type"></label>
             <input
+             className="un-edit"
               onChange={this.handleChange}
               value={this.state.pet_type}
               id="pet_type"
               name="pet_type"
               type="text"
+              placeholder="Pet type"
             />
             </div>
            
            <div>
-           <label htmlFor="comments">Comments</label>
+           <label htmlFor="comments"></label>
             <input
+             className="un-edit"
               onChange={this.handleChange}
               value={this.state.comments}
               id="comments"
               name="comments"
               type="text"
+              placeholder="Comments"
             />
            </div>
            
-            <button>Submit !</button>
+            <button className="submit-edit">Submit !</button>
           </form>
+          </div>
+          </div>
         );
     };
 };

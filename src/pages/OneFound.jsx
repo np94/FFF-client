@@ -27,9 +27,9 @@ class OneFound extends Component {
   
       return (
         <div className="missing">
-          <h2>Found details</h2>
-          <div>
-            
+          <h2 >Found details</h2>
+          <div style={{color:"#6b6d05"}}>
+        
             <img src={this.state.announce.image} alt="bob"/>
             <h2>{this.state.announce.title}</h2>
             <h3>{this.state.announce.name}</h3>
@@ -37,9 +37,10 @@ class OneFound extends Component {
             <p>{this.state.announce.email}</p>
             <p>{this.state.announce.description}</p>
             <p>{this.state.announce.pet_type}</p>
-            <p>{this.state.announce.comments}</p>
-          </div>
-      
+     
+          
+            </div>
+            
         </div>
       );
     }

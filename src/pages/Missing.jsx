@@ -26,7 +26,9 @@ class Missing extends Component {
       
         return (
             <div className="missing">
-            <h2 className="missing_title">Missing page</h2>
+              <div className="all">
+              
+            <h2 className="missing_title">Missing pets</h2>
              {this.state.announces  && this.state.announces.map((announce) => {
                 if (announce.status[0] === "Missing"){
                     return (
@@ -34,25 +36,25 @@ class Missing extends Component {
                             <img
                           style={{
                             width: "100vw",
-                            height: "",
+                            height: "50vh",
                           }}
                           src={announce.image}
                           alt={announce.name}
                             />
                         <Link to={`/missing/${announce._id}`}>
-                          <h2>{announce.title}</h2>
+                          <h3>{announce.title}</h3>
                         </Link>
-                        <h3>{announce.name}</h3>
-                        <h3>{announce.location.coordinates}</h3>
-                        <h3>{announce.pet_type}</h3>
-                        <h3>{announce.description}</h3>
-        
+                        <h4>{announce.name}</h4>
+                        <h4>{announce.location.coordinates}</h4>
+                        <h4>{announce.pet_type}</h4>
+                        <h4>{announce.description}</h4>
                       </div>
                     )
                   }
                
             
             })}
+            </div>
         </div>
         )
     }

@@ -1,0 +1,56 @@
+.Profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.link-profile {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(#aeb027, #fbcf40);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin: 30px 0px;
+}
+
+.link-create {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(#aeb027, #fbcf40);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin: 30px 0px;
+}
+
+.user-image > img {
+  border: 0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.missing > .title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.missing > .icons {
+  position: relative;
+  padding: 40px;
+}

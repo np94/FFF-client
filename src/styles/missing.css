@@ -1,10 +1,11 @@
 .missing {
   height: calc(100% - 60px);
-  padding-bottom: 70px;
+  padding-bottom: 150px;
 }
 
 .missing_title {
   text-align: center;
+  color: #6b6d05;
 }
 
 .missing_info {
@@ -13,8 +14,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #6b6d05;
 }
 
 .missing_info > img {
   text-align: center;
+  border: 0;
+  border-radius: 10%;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
