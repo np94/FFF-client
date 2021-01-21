@@ -20,7 +20,7 @@ const NavMain = (props) => {
   }
 
   return (
-    <nav className="NavMain" style={{ width: '100vw', height: '60px', backgroundColor: '#386665' }}>
+    <nav className="NavMain" style={{ width: '100vw', height: '60px' }}>
       <NavLink exact to="/">
         <h3 className="logo">Furry Friend Finder <span>🐾</span> </h3>
       </NavLink>

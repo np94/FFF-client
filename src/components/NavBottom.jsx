@@ -5,7 +5,7 @@ import "../styles/NavBottom.css";
 
 const NavBottom = () => {
     return (
-    <nav className="NavBottom" style={{ width: '100vw', height: '60px', backgroundColor: '#386665' }}>
+    <nav className="NavBottom" style={{ width: '100vw', height: '50px'}}>
    
     <ul className="nav-list">
       

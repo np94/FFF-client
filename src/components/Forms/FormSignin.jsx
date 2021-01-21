@@ -3,6 +3,7 @@ import UserContext from "../Auth/UserContext";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 import { Redirect } from "react-router-dom";
+import "../../styles/signin.css";
 
 class FormSignin extends Component {
   static contextType = UserContext;
@@ -40,18 +41,25 @@ class FormSignin extends Component {
     }
 
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" onChange={this.handleChange}
+    <div className="main">
+      <p className="sign" align="center">Sign in</p>
+      <form className="form1" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+    
+       <div >
+        <input className="un" type="email"  name="email" onChange={this.handleChange}
               value={this.state.email}
-              className="input" />
-
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" onChange={this.handleChange}
-              value={this.state.password}
-              className="input" />
-        <button>Submit</button>
+              placeholder="Email"/>
+      </div>
+          <div>
+          </div>
+        <input  className="pass" align="center"  type="password" id="password" name="password" onChange={this.handleChange}
+              value={this.state.password} placeholder="Password"
+             />
+              <div className="submit-area" >
+        <button className="submit">Submit</button>
+        </div>
       </form>
+      </div>
     );
   }
 }
