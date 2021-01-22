@@ -1,0 +1,7 @@
+.missing-details {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  color: #6b6d05;
+}

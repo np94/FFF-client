@@ -1,10 +1,15 @@
+.found {
+  height: calc(100% - 60px);
+  padding-bottom: 100px;
+}
+
 .found_title {
   text-align: center;
   color: #6b6d05;
 }
 
 .found_info {
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

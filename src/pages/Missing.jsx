@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import apiHandler from "../api/apiHandler"
 import { Link } from "react-router-dom";
+import '../styles/missing.css'
 
 
 class Missing extends Component {
@@ -26,9 +27,9 @@ class Missing extends Component {
       
         return (
             <div className="missing">
-              <div className="all">
-              
-            <h2 className="missing_title">Missing pets</h2>
+              <div className="missing-all">
+            <h2 className="missing_title" style={{ align: "center",
+  color: "#6b6d05"}}>Missing pets</h2>
              {this.state.announces  && this.state.announces.map((announce) => {
                 if (announce.status[0] === "Missing"){
                     return (
@@ -51,8 +52,6 @@ class Missing extends Component {
                       </div>
                     )
                   }
-               
-            
             })}
             </div>
         </div>

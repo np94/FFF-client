@@ -51,6 +51,7 @@ class FormSignup extends Component {
     }
 
     return (
+      <div className="all">
       <div className="main-signup">
 <p className="signup" align="center">Sign Up</p>
      
@@ -123,6 +124,7 @@ class FormSignup extends Component {
           </p>
         )}
       </div>
+    </div>
     );
   }
 } 

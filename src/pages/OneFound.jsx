@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import apiHandler from '../api/apiHandler';
-import '../styles/found.css';
+import '../styles/one-found.css';
 
 class OneFound extends Component {
     state = {
@@ -27,10 +27,11 @@ class OneFound extends Component {
   
       return (
         <div className="missing">
-          <h2 >Found details</h2>
-          <div style={{color:"#6b6d05"}}>
+          <div className="all">
+          <h2 style={{ color: "#6b6d05"}}>Found details</h2>
+          <div className="one_found">
         
-            <img src={this.state.announce.image} alt="bob"/>
+            <img style={{height:"50vh", width:"100vw", color:"#6b6d05"}} src={this.state.announce.image} alt="bob"/>
             <h2>{this.state.announce.title}</h2>
             <h3>{this.state.announce.name}</h3>
             <h4>{this.state.announce.formattedAddress}</h4>
@@ -40,7 +41,7 @@ class OneFound extends Component {
      
           
             </div>
-            
+            </div> 
         </div>
       );
     }

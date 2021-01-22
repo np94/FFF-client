@@ -41,17 +41,17 @@ class FormSignin extends Component {
     }
 
     return (
+      <div className="all">
     <div className="main">
       <p className="sign" align="center">Sign in</p>
       <form className="form1" onChange={this.handleChange} onSubmit={this.handleSubmit}>
     
-       <div >
+     
         <input className="un" type="email"  name="email" onChange={this.handleChange}
               value={this.state.email}
               placeholder="Email"/>
-      </div>
-          <div>
-          </div>
+      
+         
         <input  className="pass" align="center"  type="password" id="password" name="password" onChange={this.handleChange}
               value={this.state.password} placeholder="Password"
              />
@@ -59,6 +59,7 @@ class FormSignin extends Component {
         <button className="submit">Submit</button>
         </div>
       </form>
+      </div>
       </div>
     );
   }

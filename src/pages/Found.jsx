@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import apiHandler from "../api/apiHandler"
 import { Link } from "react-router-dom";
+import '../styles/found.css'
 
 class Found extends Component {
     state = {
@@ -23,7 +24,7 @@ class Found extends Component {
 
     render() {
         return (
-            <div className="missing">
+            <div className="found">
               <div className="all">
 
               

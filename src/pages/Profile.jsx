@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import withUser from "../components/Auth/withUser";
 import "../styles/profile.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../styles/profile.css';
 
 
 class Profile extends Component {
