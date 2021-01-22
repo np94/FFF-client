@@ -11,7 +11,6 @@ class FormEditAnnounce extends Component {
     state = {
         title: "",
         name: "",
-        location: "",
         email: "",
         description: "",
         image:"",
@@ -32,7 +31,16 @@ class FormEditAnnounce extends Component {
           .then((apiResponse) => {
             console.log(apiResponse)
             this.setState({
-               announce: apiResponse
+               title:apiResponse.title,
+                name: apiResponse.name,
+                email: apiResponse.email,
+                description: apiResponse.description ,
+                location: {
+                  coordinates: apiResponse.location.coordinates,
+                  },
+                 status: apiResponse.status,
+                 pet_type: apiResponse.pet_type,
+                 comments: apiResponse.comments,
             });
           })
           .catch((error) => {
@@ -58,8 +66,9 @@ class FormEditAnnounce extends Component {
         const announceId = this.props.match.params.id;
 
         apiHandler
-          .updateAnnounce(announceId, fd)
+          .updateAnnounce(this.props.announceId, fd)
           .then((data) => {
+
             this.props.history.push("/profile");
             this.setState({
                 httpResponse: {
